@@ -1,19 +1,15 @@
-let input=prompt("Enter the number separated by commas");
-let arr=input.split(",").map(Number);
-let box=[];
-let emptyboxcount=0;
+let m=parseInt(prompt("Enter the first number"));
+let n=parseInt(prompt("Enter the second number"));
 let i;
-for(i=0;i<arr.length;i++){
-    if(arr[i]==0){
-        emptyboxcount++;
-    }
-    else{
-        box.push(arr[i]);
-    }
+if(m>n){
+    alert("1");
 }
-box=box.sort();
-for(i=0;i<emptyboxcount;i++){
-    box.push(0);
+else{
+    let product=1;
+    for(i=m;i<=n;i++){
+      if(i%2!=0){
+      product*=i;
+    }
+}   
+    alert(product);
 }
-console.log(box);
-console.log(emptyboxcount);
